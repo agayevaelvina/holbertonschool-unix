@@ -1,8 +1,2 @@
 #!/bin/bash
-SOURCE_DIR=$(pwd)
-DEST_DIR=$(dirname "$SOURCE_DIR")
-for file in "$SOURCE_DIR"/*.html; do
-if [ -f "$file" ]; then
-cp -u "$file" "$DEST_DIR"
-    fi
-done
+for file in *.html; do [ -f "$file" ] && cp -u "$file" "$(dirname "$(pwd)")"; done
